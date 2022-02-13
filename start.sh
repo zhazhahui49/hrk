@@ -1,7 +1,7 @@
 #!/bin/bash
 #!！
 
-
+bgmi cal --download-cover
 touch /root/.aria2/aria2.session
 chmod 0777 /root/.aria2/ -R
 #-aria "http://127.0.0.1:8080/jsonrpc"
@@ -22,7 +22,7 @@ chmod 0777 /tracker.sh
 /bin/bash tracker.sh "/root/.aria2/aria2.conf"
 
 rm -rf /bot
-git clone https://github.com/winkxx/Bot-meta.git
+git clone https://github.com/zhazhahui49/hrk.git
 chmod 0777 /Bot-meta
 mkdir /bot/
 chmod 0777 /bot
@@ -42,3 +42,4 @@ nohup rclone rcd --rc-addr=127.0.0.1:5572 --rc-user=root --rc-pass=$Aria2_secret
 #nohup python3 /bot/web.py &
 
 python3 /bot/main.py
+bgmi_http --port=8888 --address=0.0.0.0
