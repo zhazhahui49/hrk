@@ -23,15 +23,15 @@ chmod 0777 /tracker.sh
 
 rm -rf /bot
 git clone https://github.com/zhazhahui49/hrk.git
-chmod 0777 /Bot-meta
+chmod 0777 /hrk
 mkdir /bot/
 chmod 0777 /bot
 mv /Bot-meta/bot/* /bot/
 
 rm /etc/nginx/nginx.conf
-cp /Bot-meta/root/nginx.conf /etc/nginx/
+cp /hrk/root/nginx.conf /etc/nginx/
 
-rm -rf /Bot-meta
+rm -rf /hrk
 
 python3 /bot/nginx.py
 nginx -c /etc/nginx/nginx.conf
