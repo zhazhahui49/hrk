@@ -27,8 +27,19 @@ echo $OS_type
 #tar xvf ffmpeg-git-*-static.tar.xz && rm -rf ffmpeg-git-*-static.tar.xz
 #mv ffmpeg-git-*/ffmpeg  ffmpeg-git-*/ffprobe /usr/bin/
 
-
 bash <(curl -sL install.emengweb.com/fclone.sh)
 mv /usr/bin/fclone /usr/bin/rclone
 chmod 777 /usr/bin/rclone
+
 curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+bgmi install
+pip install bgmi -U
+bgmi upgrade
+bgmi config
+bgmi source mikan_project
+bgmi config ARIA2_RPC_URL 'http://127.0.0.1:8080/rpc'
+bgmi config ARIA2_RPC_TOKEN 'token:$Aria2_secret'
+bgmi config ADMIN_TOKEN '$ADMIN_TOKEN'
+bgmi config TORNADO_SERVE_STATIC_FILES '0'
+#wget https://github.com/FolderMagic/FolderMagic/raw/master/FolderMagic
+#chmod +x FolderMagic
