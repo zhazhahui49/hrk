@@ -26,7 +26,7 @@ git clone https://github.com/zhazhahui49/hrk.git
 chmod 0777 /hrk
 mkdir /bot/
 chmod 0777 /bot
-mv /Bot-meta/bot/* /bot/
+mv /hrk/bot/* /bot/
 
 rm /etc/nginx/nginx.conf
 cp /hrk/root/nginx.conf /etc/nginx/
